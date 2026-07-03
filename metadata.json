@@ -1,0 +1,6 @@
+{
+  "name": "Aura Bridal - Luxury Celebrity Beauty",
+  "description": "Luxury Bridal Beauty designed to be remembered. Widescreen cinematic storytelling, editorial portfolios, and custom AI-powered bridal vision planning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

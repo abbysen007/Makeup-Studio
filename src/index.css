@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=JetBrains+Mono:wght@300;400&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-luxury-gold: #E2B49A; /* Elegant Rose Gold */
+  --color-luxury-gold-light: #F5E6D3; /* Champagne Glow */
+  --color-champagne: #F5E6D3;
+  --color-rose-gold: #E2B49A;
+  --color-blush: #FAF0ED; /* Blush pink background */
+  --color-ink: #1A1817; /* Slate editorial dark ink */
+  
+  --color-luxury-dark: #FAF0ED; /* Mapping old luxury-dark to Blush base to instantly switch page style */
+  --color-luxury-gray: #FAF7F2; /* Mapping old luxury-gray to soft Cream */
+}
+
+/* Custom baseline adjustments */
+html, body {
+  scroll-behavior: smooth;
+  background-color: #FAF0ED; /* var(--blush) */
+  color: #1A1817; /* var(--ink) */
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Luxury styling utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #1A1817 0%, #E2B49A 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-rose-gold-gradient {
+  background: linear-gradient(135deg, #E2B49A 0%, #F5E6D3 50%, #1A1817 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #1A1817 0%, #E2B49A 50%, #1A1817 100%);
+}
+
+.bg-luxury-radial-glow {
+  background: radial-gradient(circle at 50% 40%, rgba(226, 180, 154, 0.15) 0%, rgba(250, 240, 237, 0) 70%);
+}
+
+/* Shimmer animation effects */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-luxury-shimmer {
+  background: linear-gradient(90deg, rgba(226, 180, 154, 0.05) 25%, rgba(245, 230, 211, 0.18) 50%, rgba(226, 180, 154, 0.05) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+/* Glassmorphism filters used for premium aesthetic overlays */
+.glass-luxury {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(226, 180, 154, 0.2);
+}
+
+.glass-luxury-light {
+  background: rgba(26, 24, 23, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(26, 24, 23, 0.08);
+}
+
+/* Image framing styles */
+.picture-editorial-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(226, 180, 154, 0.25);
+  padding: 8px;
+  background: #FAF7F2;
+}
+
+/* Custom aesthetic glow cursors */
+.luxury-cursor-glow {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(226,180,154,0.08) 0%, rgba(250,240,237,0) 75%);
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Elegant scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF0ED;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(226, 180, 154, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(226, 180, 154, 0.5);
+}
